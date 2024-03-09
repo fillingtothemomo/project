@@ -2,6 +2,7 @@ import './App.css'
 import LoginForm from './components/Login'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
+import VehicleInfo from './components/VehicleInfo';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LoginForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/vehicle" element={<VehicleInfo />} />
+
       </Routes>
     </Router>
   );
