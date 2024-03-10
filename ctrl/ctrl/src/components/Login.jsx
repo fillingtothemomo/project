@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import Dashboard from './Dashboard';
+import './style.css'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBUU0WbFW_-FC0jAOtM3bHRozFL_By3GoU",
@@ -13,6 +14,7 @@ const firebaseConfig = {
   appId: "1:827111841690:web:2b77938adc7f1a5e332423",
   measurementId: "G-ZHLDZWPH5E"
 };
+
 initializeApp(firebaseConfig);
 
 function LoginForm() {
@@ -62,20 +64,22 @@ function LoginForm() {
       ) : (
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="userId">User ID:</label>
+            <label htmlFor="userId"></label>
             <input
               type="text"
               id="userId"
               value={userId}
+              placeholder='User Id'
               onChange={handleUserIdChange}
               required
             />
           </div>
           <div>
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password"></label>
             <input
               type="password"
               id="password"
+              placeholder='Password'
               value={password}
               onChange={handlePasswordChange}
               required

@@ -1,17 +1,17 @@
 from flask import Flask, Response, jsonify
 import cv2
 import numpy as np
-import dlib
+# import dlib
 from imutils import face_utils
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
 
-# Initialize OpenCV camera, face detector, and landmark predictor
-cap = cv2.VideoCapture(0)
-detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+# # Initialize OpenCV camera, face detector, and landmark predictor
+# cap = cv2.VideoCapture(0)
+# detector = dlib.get_frontal_face_detector()
+# predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
 #status marking for current state
 sleep = 0
