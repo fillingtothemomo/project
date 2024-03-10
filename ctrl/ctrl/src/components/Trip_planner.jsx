@@ -22,9 +22,12 @@ const TripPlanner = () => {
         console.log('Current Location:', currentLocation);
         console.log('Destination:', destination);
         console.log('Truck Nameplate:', truckNameplate);
+    
         // You can perform further actions with the trip data here
+    
+        // Reload the page
+        window.location.reload();
     };
-
     return (
         <div>
             <h2>Trip Planner</h2>
